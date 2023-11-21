@@ -1,9 +1,11 @@
-# Ohjelmistotekniikka, harjoitustyö
+# TETRIS-PELI
 
-Aloitetaan suorittamaan **ohjelmistotekniikan** *harjoitustyötä*.
+Sovellluksen avulla käyttäjän on mahdollista pelata Tetris-peliä.
 
-* [Laskarit](laskarit)
+## Dokumentaatio
 
-* [Työaikakirjanpito](dokumentaatio/tuntikirjanpito.md)
+* [Työaikakirjanpito](tetris/dokumentaatio/tuntikirjanpito.md)
 
-* [Määrittelydokumentti](dokumentaatio/maarittelydokumentti.md)
+* [Määrittelydokumentti](tetris/dokumentaatio/maarittelydokumentti.md)
+
+* [Changelog](tetris/dokumentaatio/changelog.md)
