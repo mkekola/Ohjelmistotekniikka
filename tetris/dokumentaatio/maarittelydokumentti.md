@@ -12,7 +12,7 @@ Tetris pelin toteutus työpöytäsovelluksena toimivaksi
 
 ### Pelinäkymä
 
-* Tetris-kenttä 
+* Tetris-kenttä (tehty)
 * Pisteet ja taso
 
 ## Perusversion tarjoama toiminnallisuus
@@ -35,3 +35,6 @@ Tetris pelin toteutus työpöytäsovelluksena toimivaksi
 * Pelaaja voi lopettaa pelin ja palata päävalikkoon
 
 ## Jatkokehitysideoita
+
+* Tetris-kentän ulkomuodon muokkaus
+* Erikois palikoiden lisäys

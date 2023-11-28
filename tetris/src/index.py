@@ -55,6 +55,7 @@ class Tetris:
                              (0, y), (self.width * self.block_size, y))
 
     def draw_block(self):
+        #Draw current block
         for y, row in enumerate(self.current_block.shape):
             for x, col in enumerate(row):
                 if col == 1:
@@ -67,6 +68,7 @@ class Tetris:
                     )
 
     def spawn_block(self):
+        #Spawn random block top center
         shape_rand = random.randint(0, len(Blocks) - 1)
         self.current_block = Blocks[shape_rand]
         self.current_block_x = self.width // 2 - len(self.current_block.shape[0]) // 2
@@ -76,6 +78,7 @@ class Tetris:
     pygame.init()
 
     def run(self):
+        #Main loop
         running = True
         self.spawn_block()
 
