@@ -16,4 +16,3 @@ def coverage(ctx):
 def coverage_report(ctx):
     ctx.run("coverage html", pty=True)
 
-
