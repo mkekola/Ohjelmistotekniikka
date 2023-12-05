@@ -14,3 +14,9 @@
 * Lisätty blokin luonti metodi
 * Lisätty random blokki metodi
 
+## Viikko 5
+
+* Päivitetty tasks lint
+* Päivitetty README tiedostoon komennot
+
+

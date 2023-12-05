@@ -2,8 +2,8 @@ import random
 import pygame
 
 
-
 class Block:
+    '''Block class'''
     def __init__(self, color, shape):
         self.color = color
         self.shape = shape
@@ -18,7 +18,9 @@ L_Block = Block((255, 165, 0), [[1, 1, 1], [1, 0, 0]])  # Orange
 
 Blocks = [I_Block, O_Block, T_Block, S_Block, Z_Block, J_Block, L_Block]
 
+
 class Tetris:
+    '''Tetris game class'''
     def __init__(self, width=10, height=20, block_size=30):
 
         self.width = width
@@ -34,6 +36,7 @@ class Tetris:
         self.current_block_y = 0
 
     def create_grid(self):
+        '''Create grid'''
 
         for x in range(self.width):
             for y in range(self.height):
@@ -55,6 +58,7 @@ class Tetris:
                              (0, y), (self.width * self.block_size, y))
 
     def draw_block(self):
+        '''Draw block'''
         #Draw current block
         for y, row in enumerate(self.current_block.shape):
             for x, col in enumerate(row):
@@ -68,6 +72,7 @@ class Tetris:
                     )
 
     def spawn_block(self):
+        '''Spawn block'''
         #Spawn random block top center
         shape_rand = random.randint(0, len(Blocks) - 1)
         self.current_block = Blocks[shape_rand]
@@ -78,6 +83,7 @@ class Tetris:
     pygame.init()
 
     def run(self):
+        '''Run game'''
         #Main loop
         running = True
         self.spawn_block()
