@@ -19,4 +19,6 @@
 * Päivitetty tasks lint
 * Päivitetty README tiedostoon komennot
 
+## Viikko 6
+
 
