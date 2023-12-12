@@ -37,6 +37,9 @@ def run(game_ui, clock):
     '''Run game'''
     #Main loop
     running = True
+    game_ui.tetris.spawn_block()
+
+
     while running:
         running = event_handler(game_ui)
 
@@ -44,10 +47,8 @@ def run(game_ui, clock):
             game_ui.tetris.move_block_left()
         if game_ui.tetris.move_right:
             game_ui.tetris.move_block_right()
-        if game_ui.tetris.move_down:
-            game_ui.tetris.move_block_down()
+        game_ui.tetris.move_block_down()
 
-        game_ui.tetris.spawn_block()
         game_ui.create_grid()
         game_ui.draw_block()
         pygame.display.update()

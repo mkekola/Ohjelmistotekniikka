@@ -21,4 +21,10 @@
 
 ## Viikko 6
 
+* Erotettu käyttöliittymä ja sovelluslogiikka toisistaan
+* Luotu block, clock, game_loop, game_ui, ja tetris tiedostot
+* Lisätty event_handler metodi game_loop:iin
+* Lisätty move_block*, lock_block ja check_collision metodit tetris luokkaan
+
+
 
