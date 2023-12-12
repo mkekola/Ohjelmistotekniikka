@@ -56,6 +56,7 @@ class Tetris:
 
     def check_collision(self):
         '''Check collision'''
+        # Tämä ei toimi kunnolla ja vaatii korjausta
         for y, row in enumerate(self.current_block.shape):
             for x, col in enumerate(row):
                 #if col == 1:

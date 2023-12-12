@@ -8,5 +8,5 @@
 | 28.11. | 6   | tetriksen jatkaminen, testien teko, changelog |
 | 5.12. | 3   | tetris peliin vaadittavien ominaisuuksien opiskelua, päivitetty tasks, päivitetty README |
 | 11.12. | 8   | käyttöliittymän ja sovellulogikan koodausta |
-| 12.12. | 8   | käyttöliittymän ja sovellulogikan koodausta |
-| yht   | 25   | | 
+| 12.12. | 9   | koodikatselmointi, käyttöliittymän ja sovellulogikan koodausta |
+| yht   | 34   | | 
