@@ -26,5 +26,11 @@
 * Lisätty event_handler metodi game_loop:iin
 * Lisätty move_block*, lock_block ja check_collision metodit tetris luokkaan
 
+# Viikko 7
+
+* Lisätty testit blockien liikuttamiselle
+* Korjailtu tetris.py koodia ja yritetty saada toimimaan blockien lukkiutumien alariviin
+* Tehty docstring-dokumentaatiota kuvaavammaksi
+
 
 

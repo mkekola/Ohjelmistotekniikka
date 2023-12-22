@@ -1,6 +1,6 @@
 # TETRIS-PELI
 
-Sovellluksen avulla käyttäjän on mahdollista pelata Tetris-peliä.
+Sovellluksen avulla käyttäjän on mahdollista pelata alkeellista Tetris-peliä.
 
 ## Dokumentaatio
 

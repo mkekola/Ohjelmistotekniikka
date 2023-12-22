@@ -6,14 +6,9 @@ Tetris pelin toteutus työpöytäsovelluksena toimivaksi
 
 ## Käyttöliittymäluonnos
 
-### Päävalikko
-
-* Uuden pelin aloitus
-
 ### Pelinäkymä
 
-* Tetris-kenttä (tehty)
-* Pisteet ja taso
+* Tetris-kenttä
 
 ## Perusversion tarjoama toiminnallisuus
 
@@ -23,12 +18,7 @@ Tetris pelin toteutus työpöytäsovelluksena toimivaksi
 
 ### Peli palojen liikuttaminen ja kääntäminen
 
-* Pelaaja pystyy liikuttamaan paloja oikealle, vasemmalle ja alaspäin
-* Pelaaja pystyy kääntämään paloja myötä- ja vastapäivään
-
-### Täyden rivin poistaminen
-
-* Kun paloista muodostuva yksi rivi on täynnä, se poistetaan ja ylemmät rivit putoavat alaspäin
+* Pelaaja pystyy liikuttamaan paloja oikealle, vasemmalle painamalla nuolinäppäimiä pohjaan
 
 ### Pelin lopettaminen
 
@@ -36,5 +26,7 @@ Tetris pelin toteutus työpöytäsovelluksena toimivaksi
 
 ## Jatkokehitysideoita
 
+* Palojen pudottaminen
+* Paloista rivien muodostaminen ja pisteiden keräys täydestä rivistä
 * Tetris-kentän ulkomuodon muokkaus
 * Erikois palikoiden lisäys
