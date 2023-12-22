@@ -16,6 +16,22 @@ Sovellluksen avulla käyttäjän on mahdollista pelata Tetris-peliä.
 
 ## Komennot
 
+**Suoritetaan tetris-hakemistossa**
+
+### Asennus
+
+```bash
+poetry init --python "^3.8"
+```
+
+```bash
+poetry install
+```
+
+```bash
+poetry add invoke
+```
+
 ### Tetris-pelin suoritus
 
 ```bash

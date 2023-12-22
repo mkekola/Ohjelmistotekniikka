@@ -3,7 +3,9 @@ import random
 from block import Blocks
 
 class Tetris:
-    '''Tetris game class'''
+    '''Class for the game of Tetris.
+    The game board is represented by a grid of 0s and 1s. 0 represents an empty space and 1 represents a block.
+    The blocks are represented by a list of lists of 0s and 1s. 0 represents an empty space and 1 represents a block.'''
     def __init__(self, width=10, height=20, block_size=30):
 
         self.width = width
@@ -20,7 +22,9 @@ class Tetris:
         self.move_down = False
 
     def spawn_block(self):
-        '''Spawn block'''
+        '''Method for spawning a new block.
+        The block is spawned at the top center of the game board.
+        The block is chosen randomly from the list of blocks.'''
         #Spawn random block top center
         shape_rand = random.randint(0, len(Blocks) - 1)
         self.current_block = Blocks[shape_rand]
@@ -28,49 +32,55 @@ class Tetris:
         self.current_block_y = 0
 
     def move_block_left(self):
-        '''Move block left'''
-        print(self.current_block_x)
-        print(self.current_block_y)
-        self.current_block_x -= 1
-        if self.check_collision() or self.current_block_x == 0:
-            self.current_block_x += 1
-
-    def move_block_right(self):
-        #todo tarkista osuuko pisin sivu reunaan
-        '''Move block right'''
-        self.current_block_x += 1
-        if self.check_collision() or self.current_block_x == self.width -1:
+        '''Mehod for moving block left.
+        The block can only be moved left if there is no collision with another block or the left edge of the game board.'''
+        if self.current_block_x > 0 and not self.check_collision():
             self.current_block_x -= 1
 
+    def move_block_right(self):
+        '''Method for moving block right.
+        The block can only be moved right if there is no collision with another block or the right edge of the game board.'''
+        if self.current_block_x < self.width - len(self.current_block.shape[0]) and not self.check_collision():
+            self.current_block_x += 1
+
     def move_block_down(self):
-        '''Move block down'''
-        print("moi")
-        self.current_block_y += 1
-        print(self.current_block)
-        if self.check_collision() or self.current_block_y == self.height -1:
-            print("collision")
-            self.current_block_y -= 1
+        '''Method for moving block down.
+        The block can only be moved down if there is no collision with another block or the bottom edge of the game board.'''
+        if not self.check_collision():
+            self.current_block_y += 1
+        else:
             self.lock_block()
             self.spawn_block()
 
 
+#tämä koodi on generoitu ChatGBT:llä
     def check_collision(self):
-        '''Check collision'''
-        # Tämä ei toimi kunnolla ja vaatii korjausta
+        '''Method for checking collision.
+        The block can only be moved if there is no collision with another block or the bottom edge of the game board.'''
         for y, row in enumerate(self.current_block.shape):
             for x, col in enumerate(row):
-                #if col == 1:
-                #    grid_x = self.current_block_x + x
-                #    grid_y = self.current_block_y + y
-#
-                #    # Check if the block is outside the grid or collides with a locked block
-                #    if not (0 <= grid_x < self.width and 0 <= grid_y < self.height) or self.grid[grid_y][grid_x] == 1:
-                #        return True
+                if col == 1:
+                    if (
+                        self.current_block_y + y >= self.height
+                        or self.grid[self.current_block_y + y][self.current_block_x + x] == 1
+                    ):
+                        return True
 
-                return False
+        # Check collision with blocks at the bottom
+        for x in range(len(self.current_block.shape[0])):
+            if (
+                self.current_block_x + x < self.width
+                and self.grid[self.current_block_y + len(self.current_block.shape)]
+                [self.current_block_x + x] == 1
+            ):
+                return True
+
+        return False
+#genroitu koodi päättyy
 
     def lock_block(self):
-        '''Lock block'''
+        '''Methdo for locking the block in place when it collides with another block or the bottom edge of the game board.
+        The block is locked in place by changing the 0s in the grid to 1s.'''
         for y, row in enumerate(self.current_block.shape):
             for x, col in enumerate(row):
                 if col == 1:

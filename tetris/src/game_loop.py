@@ -1,16 +1,14 @@
 import pygame
-from tetris import Tetris
-from game_ui import GameUI
-from clock import Clock
 
 
 def event_handler(game_ui):
-    '''Event handler'''
+    '''Method for handling user key presses.
+    The user can move the block left, right and down using the arrow keys.'''
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             return False
         if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_ESCAPE:  # Quit on Escape key
+            if event.key == pygame.K_ESCAPE:
                 return False
             #Move block left
             if event.key == pygame.K_LEFT:
@@ -34,7 +32,8 @@ def event_handler(game_ui):
     return True
 
 def run(game_ui, clock):
-    '''Run game'''
+    '''Mehod for running the game loop.
+    The game loop is responsible for updating the game state and drawing the game board and the current block on the screen.'''
     #Main loop
     running = True
     game_ui.tetris.spawn_block()

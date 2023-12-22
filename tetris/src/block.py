@@ -1,5 +1,5 @@
 class Block:
-    '''Block class'''
+    '''Represents a block in the game of Tetris. A block is defined by its color and shape.'''
     def __init__(self, color, shape):
         self.color = color
         self.shape = shape

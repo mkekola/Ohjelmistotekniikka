@@ -1,10 +1,9 @@
 '''Game UI'''
 import pygame
-from tetris import Tetris
-
 
 class GameUI:
-    '''Game UI'''
+    '''Class for the game UI of Tetris game.
+    The game UI is responsible for drawing the game board and the current block on the screen.'''
     def __init__(self, tetris):
         self.tetris = tetris
         pygame.display.set_caption("Tetris")
@@ -15,7 +14,7 @@ class GameUI:
 
 
     def create_grid(self):
-        '''Create grid'''
+        '''Method for creating the grid on the screen for the game of Tetris and drawing visible lines'''
         for x in range(self.tetris.width):
             for y in range(self.tetris.height):
                 pygame.draw.rect(
@@ -27,7 +26,7 @@ class GameUI:
 
             # Draw vertical lines
             for x in range(0,
-                           (self.tetris.width + 1) * self.tetris.block_size, 
+                           (self.tetris.width + 1) * self.tetris.block_size,
                            self.tetris.block_size):
                 pygame.draw.line(self.screen, (105, 105, 105),
                                  (x, 0), (x, self.tetris.height * self.tetris.block_size))
@@ -40,7 +39,8 @@ class GameUI:
                                  (0, y), (self.tetris.width * self.tetris.block_size, y))
 
     def draw_block(self):
-        '''Draw block'''
+        '''Method for drawing the current block on the grid.
+        The block is drawn by drawing a rectangle for each block in the block shape.'''
         #Draw current block
         for y, row in enumerate(self.tetris.current_block.shape):
             for x, col in enumerate(row):
