@@ -31,6 +31,7 @@
 * Lisätty testit blockien liikuttamiselle
 * Korjailtu tetris.py koodia ja yritetty saada toimimaan blockien lukkiutumien alariviin
 * Tehty docstring-dokumentaatiota kuvaavammaksi
+* Päivitetty määrittelydokumentti vastaamaan nykyistä sovellusta
 
 
 
